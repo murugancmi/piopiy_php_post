@@ -5,6 +5,9 @@
 
 
 $pcmo_action = array(
+    array(
+        "action" => "record"
+    ),
     array("action"=>"bridge",
     "duration"=>300,
     "timeout"=>20,
@@ -12,7 +15,7 @@ $pcmo_action = array(
     "loop" =>1,
     "connect" => array(
         array("type"=>"pstn",
-        "number" => 9677551930) // second number to call
+        "number" => 967) // second number to call
     )
     )
 );
@@ -39,5 +42,7 @@ $result = curl_exec($ch);
   
 // Function to convert array into JSON
 echo $result;
+
+echo json_encode($options_data);
   
 ?>
